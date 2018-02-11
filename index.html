@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="bootstrap\dist\css\bootstrap.min.css"/>
+	<link rel="stylesheet" href="main.css"/>
+	<script src="bootstrap\dist\js\bootstrap.min.js"></script>
+	<script src="main.js"></script>
+  </head>
+  <body>
+		<style>
+		.dir_button {
+                        font-size: 36pt;
+                }
+                #left{grid-area: left;}
+                #right{grid-area: right;}
+                #up{grid-area: up;}
+                #down{grid-area: down;}
+                #stop{grid-area: stop;}
+                #ul{grid-area: ul;}
+                #ur{grid-area: ur;}
+                #dl{grid-area: dl;}
+                #dr{grid-area: dr;}
+                .grid-container {
+			display: grid;
+           	grid-template:
+				'ul up ur'
+				'left stop right'
+				'dl down dr';
+			grid-gap: 10px;
+			background-color: blue;
+			padding: 10px;
+			width: 200px;
+			height: 200px;
+                }
+
+        </style>
+        <div class="grid-container" style="width: 400px; height: 400px;">
+
+          <button class="dir_button" id="ul" onClick="goForwardLeft()">\</button>
+          <button class="dir_button" id="left" onClick="goLeft()"><</button>
+          <button class="dir_button" id="ur" onClick="goForwardRight()">/</button>
+          <button class="dir_button" id="dl" onClick="goBackwardLeft()">/</button>
+          <button class="dir_button" id="up" onClick="goForward()">^</button>
+          <button class="dir_button" id="stop" onClick="stop()">x</button>
+          <button class="dir_button" id="down" onClick="goBackward()">v</button>
+          <button class="dir_button" id="right" onClick="goRight()">></button>
+          <button class="dir_button" id="dr" onClick="goBackwardRight()">\</button>
+        </div>
+  </body>
+</html>
